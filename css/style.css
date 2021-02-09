@@ -1,0 +1,136 @@
+/* подключаем шрифты */
+@import url("https://fonts.googleapis.com/css?family=Satisfy:regular&display=swap");
+/* Стили обнуления */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  /*убираем точки*/
+  list-style: none;
+}
+a, /* убираем у ссылок предустановки*/
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,/*убираем стили у заголовков*/
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  /* Убираем фантомный отступ от картинки */
+  vertical-align: top;
+}
+body {
+  line-height: 1;
+  color: #000;
+}
+/*-----------------------------------------*/
+
+.wrapper {
+  background-color: rgb(0, 0, 255, 0.4);
+}
+
+.block {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: rgb(255, 0, 0, 0.3);
+  font-size: 22px;
+  border: 15px dotted chartreuse;
+  outline: 5px solid grey; /*outline - не меняет объект, накладывается сверху, перекрывая соседей*/
+}
+
+.items {
+  font-size: 0; /*для удаления фантомного отступа - у родителя 0px*/
+}
+.item {
+  width: 150px;
+  background-color: rgb(221, 218, 49);
+  padding: 15px;
+  color: black;
+  display: inline-block; /*возникают фантомные отступы*/
+  font-size: 20px; /*убираем фантомные отступы из за строки*/
+  margin-bottom: 20px;
+}
+.article {
+  background-color: grey;
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.float_img {
+  /* float именно у картинки добавляется*/
+  float: right;
+}
+.inner {
+  /*специально встраиваем внутри обертку со свойствами из за флоата. */
+  clear: both;
+}
+
+.block_2 {
+  border: 5px solid aqua;
+  width: 350px; /*ограничиваем по ширине*/
+  margin: 0 auto; /*центруем*/
+  padding: 20px;
+  border-radius: 10px 70px; /*скругляем углы*/
+  box-shadow: inset 5px 20px 20px 1px black, 1px 10px 40px 1px yellow; /* ьультитень для блока, inset - для внутренней тени*/
+}
+
+.double {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 40px 40% 0px; /*марджин в процентах - интересненько*/
+  border: 3px solid rgba(0, 0, 0, 0); /*0 - полностью прозрачный. хотя черный*/
+}
+
+.double:hover {
+  border: 3px solid rgba(0, 0, 0); /* при наведении бордер появляется*/
+}
+
+p {
+  margin-top: 30px;
+  font-family: Satisfy;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.love {
+  /* для центрирования заключили в абзац - выровняли как текст*/
+  max-width: 200px;
+  margin: 40px 45% 0px;
+  filter: drop-shadow(
+    15px 5px 1px rgb(255, 192, 203)
+  ); /*для неправильной тени в svg*/
+}
+
+.love:hover {
+  opacity: 0.25; /* играем с прозрачностью, объект взаимодействует всегда, даже когда невидим*/
+}
+
+.button {
+  display: block; /* позволяем занять всю ширину родителя*/
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 15px 10px; /* с боков  10px чтобы при уменьшении не прилипал текст к границам */
+  font-family: Satisfy;
+  background: rgb(0, 255, 255, 0.4);
+  color: #000;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+}
